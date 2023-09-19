@@ -1,7 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     screens: {
@@ -16,9 +17,6 @@ module.exports = {
       },
       colors: {
         'dark-background': '#212121',
-        easy: '#6EE4CF',
-        medium: '#7CE3FA',
-        hard: '#FF9C9C',
         button: '#4D59C6',
         buttonHover: '#4D59C6BF',
         buttonActive: '#3b47b6',
