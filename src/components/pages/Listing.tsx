@@ -13,10 +13,10 @@ type TopicObject = {
 
 const Listing = () => {
   const [topics, setTopics] = useState([]);
-  const apiUrl = process.env.REACT_APP_API_URL;
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const getTopics = async () => {
-    return await axios.get(`${apiUrl}/api/topic`);
+    return await axios.get(`${API_URL}/api/topic`);
   }
 
   useEffect(() => {

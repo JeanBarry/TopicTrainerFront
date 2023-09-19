@@ -7,6 +7,12 @@ type TopicProps = {
   logoUrl: string
 }
 
+const backgroundColors = {
+  easy: '#6EE4CF',
+  medium: '#7CE3FA',
+  hard: '#FF9C9C'
+}
+
 const Topic: FC<TopicProps> = (
   {
     technology,
@@ -15,12 +21,12 @@ const Topic: FC<TopicProps> = (
     logoUrl
   }
 ) => {
-  const API_URL = process.env.REACT_APP_API_URL;
+  const API_URL = import.meta.env.VITE_API_URL;
   return (
     <div className={`h-[175px] w-[175px] 
       xl:h-[300px] xl:w-[300px] 
       flex flex-col justify-center items-center 
-      text-center bg-${difficulty}`}
+      text-center`} style={{backgroundColor: backgroundColors[difficulty]}}
     >
       <img
         className={'w-[78px] xl:w-[150px] h-auto'}
