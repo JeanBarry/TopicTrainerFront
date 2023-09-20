@@ -5,6 +5,8 @@ import Listing from "./components/pages/Listing.tsx";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Listing/>
+    <div className={'relative'}>
+      <Listing/>
+    </div>
   </React.StrictMode>,
 )
