@@ -7,6 +7,7 @@ type TopicObject = {
   id: string,
   technology: string,
   name: string,
+  description: string,
   difficulty: string,
   logoUrl: string
 };
@@ -31,6 +32,7 @@ const Listing = () => {
     return <Topic
       technology={topic.technology}
       name={topic.name}
+      description={topic.description}
       difficulty={topic.difficulty}
       logoUrl={topic.logoUrl}
       key={topic.id}
